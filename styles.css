@@ -1,0 +1,22 @@
+// ==========================================================================
+// FIREBASE CONFIGURATION
+// ==========================================================================
+// Replace the values below with the config object from your own Firebase
+// project (Firebase Console → Project settings → General → "Your apps" →
+// the web app (</>) you registered). See README.md for the full setup
+// walkthrough — it only takes about 10 minutes and stays on the free plan.
+//
+// This file is meant to be public. Firebase web config values (apiKey,
+// authDomain, etc.) are not secret — they only identify which Firebase
+// project to talk to. Real access control happens in Firestore Security
+// Rules (see README.md), not by hiding this file.
+// ==========================================================================
+
+export const firebaseConfig = {
+  apiKey: "",
+  authDomain: "",
+  projectId: "",
+  storageBucket: "",
+  messagingSenderId: "",
+  appId: ""
+};

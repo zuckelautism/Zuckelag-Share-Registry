@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0A0E1A">
+<title>Zuckel AG — Investor Relations</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+
+<nav class="topnav">
+  <div class="topnav-inner">
+    <a class="topnav-brand" href="index.html">
+      <img src="assets/img/logo.png" alt="Zuckel AG">
+      <span>ZUCKEL AG</span>
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="Menü öffnen">☰</button>
+    <div class="topnav-links">
+      <a href="index.html">Home</a>
+      <a href="standorte.html">Standorte</a>
+      <a href="mitarbeiter.html">Mitarbeiter</a>
+      <a href="unternehmenswert.html">Unternehmenswert</a>
+      <a href="anteile.html" class="active">Investor Relations</a>
+      <a href="karriere.html">Karriere</a>
+      <a href="impressum.html">Impressum</a>
+    </div>
+  </div>
+</nav>
+
+<div class="page">
+
+  <header class="page-header">
+    <div class="title-block">
+      <p class="eyebrow">Stellari Continuum · Internal Ledger</p>
+      <h1>Investor Relations</h1>
+      <p class="lede">Anteilseigner und verfügbare Anteile der Zuckel Aktiengesellschaft.</p>
+    </div>
+    <div class="stamp">VERTRAULICH</div>
+  </header>
+
+  <main class="layout">
+
+    <section class="panel chart-panel" aria-label="Anteilsverteilung">
+      <div class="chart-wrap">
+        <svg id="donut" viewBox="0 0 320 320" role="img" aria-labelledby="chartTitle">
+          <title id="chartTitle">Diagramm der Anteilsverteilung</title>
+          <defs>
+            <pattern id="availablePattern" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+              <rect width="8" height="8" fill="#1A2238"></rect>
+              <line x1="0" y1="0" x2="0" y2="8" stroke="#475569" stroke-width="3"></line>
+            </pattern>
+          </defs>
+          <g class="sweep" id="tickGroup"></g>
+          <g id="sliceGroup"></g>
+        </svg>
+        <div class="readout">
+          <span class="big" id="assignedPct">0.0%</span>
+          <span class="label">VERGEBEN</span>
+          <span class="sub" id="availableSub">0.0% verfügbar</span>
+        </div>
+      </div>
+      <p class="legend-hint">Äußerer Ring zeigt vergebene vs. verfügbare Anteile</p>
+    </section>
+
+    <section class="panel" aria-label="Anteilseigner">
+      <div class="section-head">
+        <h2>Anteilseigner</h2>
+        <div id="editControls"></div>
+      </div>
+      <ul class="holder-list" id="holderList">
+        <li class="loading-state"><span class="big-icon">⋯</span>Wird geladen…</li>
+      </ul>
+      <div class="warning hidden" id="warningBanner"></div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <span class="muted" id="footerNote">Live-Daten · für alle Besucher sichtbar</span>
+    <div class="footer-controls" id="footerControls"></div>
+  </footer>
+
+  <p class="legal">Nur für interne Zwecke. Zuckel Aktiengesellschaft.</p>
+
+</div>
+
+<div class="overlay hidden" id="loginOverlay">
+  <div class="modal">
+    <h2>Admin-Zugang</h2>
+    <p class="muted">Mit deinem Firebase-Konto anmelden, um Inhalte zu bearbeiten.</p>
+    <div class="field">
+      <label for="emailInput">E-Mail</label>
+      <input type="email" id="emailInput" autocomplete="username" placeholder="admin@example.com">
+    </div>
+    <div class="field">
+      <label for="passwordInput">Passwort</label>
+      <input type="password" id="passwordInput" autocomplete="current-password" placeholder="Passwort">
+    </div>
+    <div class="error hidden" id="loginError">Login fehlgeschlagen.</div>
+    <div class="modal-actions">
+      <button class="btn-ghost" id="cancelLogin">Abbrechen</button>
+      <button class="btn-primary" id="submitLogin">Anmelden</button>
+    </div>
+  </div>
+</div>
+
+<script type="module" src="assets/pages/anteile.js"></script>
+</body>
+</html>

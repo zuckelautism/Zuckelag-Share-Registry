@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0A0E1A">
+<title>Zuckel AG — Impressum</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+
+<nav class="topnav">
+  <div class="topnav-inner">
+    <a class="topnav-brand" href="index.html">
+      <img src="assets/img/logo.png" alt="Zuckel AG">
+      <span>ZUCKEL AG</span>
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="Menü öffnen">☰</button>
+    <div class="topnav-links">
+      <a href="index.html">Home</a>
+      <a href="standorte.html">Standorte</a>
+      <a href="mitarbeiter.html">Mitarbeiter</a>
+      <a href="unternehmenswert.html">Unternehmenswert</a>
+      <a href="anteile.html">Investor Relations</a>
+      <a href="karriere.html">Karriere</a>
+      <a href="impressum.html" class="active">Impressum</a>
+    </div>
+  </div>
+</nav>
+
+<div class="page">
+
+  <header class="page-header">
+    <div class="title-block">
+      <p class="eyebrow">Stellari Continuum · Salaria</p>
+      <h1>Impressum &amp; Kontakt</h1>
+    </div>
+  </header>
+
+  <section class="panel">
+    <div class="section-head"><h2>Angaben zur Firma</h2></div>
+    <table class="ledger">
+      <tbody>
+        <tr><td style="color:var(--text-2); width:200px;">Firma</td><td>Zuckel Aktiengesellschaft</td></tr>
+        <tr><td style="color:var(--text-2);">Sitz</td><td>Salaria, Stellari Continuum</td></tr>
+        <tr><td style="color:var(--text-2);">Vertreten durch</td><td>Zuckel, Chief Executive Officer</td></tr>
+        <tr><td style="color:var(--text-2);">Mandat</td><td>Modernisierung Salarias im Auftrag des Imperialen Throns</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="panel">
+    <div class="section-head"><h2>Kontakt</h2></div>
+    <p>
+      Für Anfragen wende dich ingame oder im Discord an die Geschäftsführung:
+      <strong>Zuckel</strong> (CEO), <strong>hansylp</strong> (CCO) oder <strong>Cassian Adler</strong> (CMO).
+    </p>
+    <p class="muted">Trag hier gerne euren Server-Discord-Link oder weitere Kontaktwege ein.</p>
+  </section>
+
+  <footer class="site-footer">
+    <span class="muted">Stellari Continuum · Salaria</span>
+    <div class="footer-controls" id="footerControls"></div>
+  </footer>
+
+  <p class="legal">Zuckel Aktiengesellschaft. Diese Seite und ihre Inhalte sind Eigentum der Firma.</p>
+
+</div>
+
+<div class="overlay hidden" id="loginOverlay">
+  <div class="modal">
+    <h2>Admin-Zugang</h2>
+    <p class="muted">Mit deinem Firebase-Konto anmelden, um Inhalte zu bearbeiten.</p>
+    <div class="field">
+      <label for="emailInput">E-Mail</label>
+      <input type="email" id="emailInput" autocomplete="username" placeholder="admin@example.com">
+    </div>
+    <div class="field">
+      <label for="passwordInput">Passwort</label>
+      <input type="password" id="passwordInput" autocomplete="current-password" placeholder="Passwort">
+    </div>
+    <div class="error hidden" id="loginError">Login fehlgeschlagen.</div>
+    <div class="modal-actions">
+      <button class="btn-ghost" id="cancelLogin">Abbrechen</button>
+      <button class="btn-primary" id="submitLogin">Anmelden</button>
+    </div>
+  </div>
+</div>
+
+<script type="module" src="assets/pages/impressum.js"></script>
+</body>
+</html>
